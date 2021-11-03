@@ -1,6 +1,6 @@
 <odoo>
 
-	<record id="payment_form_view" model="ir.ui.view">
+	<record id="payment_wizard_form_view" model="ir.ui.view">
 	    <field name="name">payment_form_view</field>
 	    <field name="model">account.payment.register</field>
 	    <field name="inherit_id" ref="account.view_account_payment_register_form"/>
@@ -14,16 +14,14 @@
 	    </field>
     </record>
 
-    <record model="ir.ui.view" id="payment_form_view_wizard_inh">
-		<field name="name">payment_form_view_wizard_inh</field>
-		<field name="model">account.payment</field>
+    <record model="ir.ui.view" id="l10n_mx_edi_payment_form_view_wizard_inh">
+		<field name="name">payment.form.view.wizard.inh</field>
+		<field name="model">account.payment.register</field>
 		<field name="inherit_id" ref="l10n_mx_edi.view_account_reg_payment_form_inh_l10n_mx"/>
 		<field name="arch" type="xml">
-		<data>
 			<field name="l10n_mx_edi_payment_method_id" position="after">				
 				<field name="clave_conf"/>
 			</field>
-		</data>
 		</field>
 	</record>
 
